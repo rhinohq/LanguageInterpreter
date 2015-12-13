@@ -1,4 +1,4 @@
-﻿namespace LanguageInterpreter
+﻿namespace LanguageInterpreter.Lua
 {
     internal class LuaLexer
     {

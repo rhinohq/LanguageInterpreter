@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace LanguageInterpreter
+﻿namespace LanguageInterpreter
 {
-    class Result
+    internal class Result
     {
         public string Repr(string Token, int Pos)
         {
@@ -10,8 +8,13 @@ namespace LanguageInterpreter
         }
     }
 
-    class Parser
+    internal class Parser
     {
+        public string Call(string[,] Tokens, int Pos)
+        {
+            return null;
+        }
+
         public Concat Add()
         {
             Concat concat = new Concat();
@@ -37,11 +40,11 @@ namespace LanguageInterpreter
         {
             Process process = new Process();
 
-            return process; 
+            return process;
         }
     }
 
-    class Tag : Parser
+    internal class Tag : Parser
     {
         public string TokenTag { get; set; }
 
@@ -58,7 +61,7 @@ namespace LanguageInterpreter
         }
     }
 
-    class Reserved : Parser
+    internal class Reserved : Parser
     {
         public string Value { get; set; }
         public string Tag { get; set; }
@@ -76,43 +79,37 @@ namespace LanguageInterpreter
         }
     }
 
-    class Concat : Parser
+    internal class Concat : Parser
     {
-
+        public Parser Left { get; set; }
+        public Parser Right { get; set; }
     }
 
-    class Exp : Parser
+    internal class Exp : Parser
     {
-
     }
 
-    class Alternate : Parser
+    internal class Alternate : Parser
     {
-
     }
 
-    class Opt : Parser
+    internal class Opt : Parser
     {
-
     }
 
-    class Rep : Parser
+    internal class Rep : Parser
     {
-
     }
 
-    class Process : Parser
+    internal class Process : Parser
     {
-
     }
 
-    class Lazy : Parser
+    internal class Lazy : Parser
     {
-
     }
 
-    class Phase : Parser
+    internal class Phase : Parser
     {
-
     }
 }

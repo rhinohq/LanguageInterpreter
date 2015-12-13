@@ -1,4 +1,4 @@
-﻿namespace LanguageInterpreter
+﻿namespace LanguageInterpreter.Python
 {
     internal class PythonLexer
     {
