@@ -1,4 +1,6 @@
-﻿namespace LanguageInterpreter
+﻿// This is a combinator. A combinator is a function which produces a parser as its output, usually after taking one or more parsers as input.
+
+namespace LanguageInterpreter
 {
     internal class Result
     {
@@ -8,6 +10,7 @@
         }
     }
 
+    // The class that defines the parsers. Parsers are used to create the AST.
     internal class Parser
     {
         public string Call(string[,] Tokens, int Pos)
@@ -61,6 +64,7 @@
         }
     }
 
+    // Reserved will be used to parse reserved words and operators; it will accept tokens with a specific value and tag.
     internal class Reserved : Parser
     {
         public string Value { get; set; }

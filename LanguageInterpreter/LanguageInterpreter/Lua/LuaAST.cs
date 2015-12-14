@@ -1,4 +1,6 @@
-﻿namespace LanguageInterpreter.Lua
+﻿// This is the AST (Abstract Syntax Tree).  
+
+namespace LanguageInterpreter.Lua
 {
     internal class Statement : Equality
     {

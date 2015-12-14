@@ -1,4 +1,5 @@
 ﻿using System;
+// Program entry point.
 
 namespace LanguageInterpreter
 {
@@ -8,6 +9,7 @@ namespace LanguageInterpreter
         {
         }
 
+        // What is printed when the command-line arguments and not entered correctly.
         public void Usage()
         {
             Console.WriteLine("Usage: <Source Code Filename>");

@@ -1,11 +1,15 @@
-﻿namespace LanguageInterpreter.Lua
+﻿// Setup for Lexer for the language Lua.
+
+namespace LanguageInterpreter.Lua
 {
     internal class LuaLexer
     {
+        // Constant variables for storing the tag types in an easily accessable and readable way.
         public const string RESERVED = "RESERVED";
         public const string INT = "INT";
         public const string ID = "ID";
 
+        // Expressions that are used for the token creation for Lua. These are the operators and keywords used by Lua.
         private string[,] TokenExpressions = new string[,] {
             { @"and", null },
             { @"break", null },
@@ -60,6 +64,7 @@
             { @"[A-Za-z][A-Za-z0-9_]*", ID }
         };
 
+        // Function for returning the tokens from the source code.
         public string[,] LuaLex(string[] Characters)
         {
             Lexer Lexer = new Lexer();
