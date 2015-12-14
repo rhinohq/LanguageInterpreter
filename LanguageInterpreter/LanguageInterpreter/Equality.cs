@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LanguageInterpreter
+﻿namespace LanguageInterpreter
 {
-    class Equality
+    internal class Equality
     {
         public bool Eq()
         {
-            return 
+            
+        }
+
+        public bool Ne()
+        {
+            
         }
     }
 }

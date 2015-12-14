@@ -1,78 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LanguageInterpreter.Lua
+﻿namespace LanguageInterpreter.Lua
 {
-    class Statement : Equality
+    internal class Statement : Equality
     {
-
     }
 
-    class Aexp : Equality
+    internal class Aexp : Equality
     {
-
     }
 
-    class Bexp : Equality
+    internal class Bexp : Equality
     {
-
     }
 
-    class AssignStatement : Statement
+    internal class AssignStatement : Statement
     {
         public string Name { get; set; }
     }
 
-    class CompoundStatement : Statement
+    internal class CompoundStatement : Statement
     {
-
     }
 
-    class IfStatement : Statement
+    internal class IfStatement : Statement
     {
-
     }
 
-    class WhileStatement : Statement
+    internal class WhileStatement : Statement
     {
-
     }
 
-    class IntAexp : Aexp
+    internal class IntAexp : Aexp
     {
-
     }
 
-    class VarAexp : Aexp
+    internal class VarAexp : Aexp
     {
-
     }
 
-    class BinopAexp : Aexp
+    internal class BinopAexp : Aexp
     {
-
     }
 
-    class RelopBexp : Bexp
+    internal class RelopBexp : Bexp
     {
-
     }
 
-    class AndBexp : Bexp
+    internal class AndBexp : Bexp
     {
-
     }
 
-    class OrBexp : Bexp
+    internal class OrBexp : Bexp
     {
-
     }
 
-    class NotBexp : Bexp
+    internal class NotBexp : Bexp
     {
-
     }
 }

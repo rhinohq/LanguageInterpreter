@@ -2,9 +2,9 @@
 {
     internal class PythonLexer
     {
-        private const string RESERVED = "RESERVED";
-        private const string INT = "INT";
-        private const string ID = "ID";
+        public const string RESERVED = "RESERVED";
+        public const string INT = "INT";
+        public const string ID = "ID";
 
         private string[,] TokenExpressions = new string[,] {
             { @"[ \n\t]+", null },

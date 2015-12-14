@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 namespace LanguageInterpreter
 {
-    class Lexer
+    internal class Lexer
     {
         public string[,] Lex(string[] Characters, string[,] TokenExpressions)
         {
@@ -15,7 +11,7 @@ namespace LanguageInterpreter
             string[,] Tokens;
             bool Match = false;
 
-            while(Pos < Characters.Length)
+            while (Pos < Characters.Length)
             {
                 foreach (string TokenExpression in TokenExpressions)
                 {
@@ -24,7 +20,6 @@ namespace LanguageInterpreter
 
                     if (Match)
                     {
-                        
                     }
                 }
 
@@ -35,7 +30,6 @@ namespace LanguageInterpreter
                 }
                 else
                 {
-
                 }
             }
 
