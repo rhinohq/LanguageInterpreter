@@ -1,4 +1,4 @@
-﻿// This is the AST (Abstract Syntax Tree).  
+﻿// This is the AST (Abstract Syntax Tree).
 
 namespace LanguageInterpreter.Lua
 {

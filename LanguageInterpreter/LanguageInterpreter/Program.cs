@@ -1,19 +1,41 @@
-﻿using System;
-// Program entry point.
+﻿// Program entry point.
+
+using System;
+using System.IO;
 
 namespace LanguageInterpreter
 {
-    internal class Program
+    class Program
     {
         private static void Main(string[] args)
         {
+            // If the expected command line arguments have not been given, it prints the usage guide.
+            if (args.Length != 2)
+                Usage();
+
+            // Read all the source code from specified file.
+            string Code = File.ReadAllText(args[1]);
+
+            // If Lua is picked, it runs the Lua interpreter.
+            if (args[0] == "/l")
+                InterpretLua(Code);
         }
 
-        // What is printed when the command-line arguments and not entered correctly.
-        public void Usage()
+        // The Usage Guide
+        public static void Usage()
         {
-            Console.WriteLine("Usage: <Source Code Filename>");
+            Console.WriteLine("Usage: <Language Choice> <Source Code Filename>");
+            Console.WriteLine("Python: /p");
+            Console.WriteLine("Lua: /l");
             Environment.Exit(0);
+        }
+
+        public static void InterpretLua(string Code)
+        {
+            Lua.LuaLexer Lexer = new Lua.LuaLexer();
+            string[,] Tokens = Lexer.LuaLex(Code);
+
+            Lua.LuaParser Parser = new Lua.LuaParser();
         }
     }
 }

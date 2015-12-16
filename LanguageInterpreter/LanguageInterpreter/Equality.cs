@@ -4,12 +4,10 @@
     {
         public bool Eq()
         {
-            
         }
 
         public bool Ne()
         {
-            
         }
     }
 }

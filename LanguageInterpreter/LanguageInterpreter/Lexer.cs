@@ -32,6 +32,7 @@ namespace LanguageInterpreter
                         Tokens[0, TokenIndex] = TokenExpressions[0, Count];
 
                         TokenIndex++;
+                        Count++;
 
                         break;
                     }
@@ -41,7 +42,7 @@ namespace LanguageInterpreter
 
                 if (!Match)
                 {
-                    Console.WriteLine("Illegal character: ");
+                    Console.WriteLine("Illegal character: " + Characters[Pos]);
                     Environment.Exit(0);
                 }
                 else
