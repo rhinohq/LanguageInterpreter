@@ -25,8 +25,8 @@ namespace LanguageInterpreter
         public static void Usage()
         {
             Console.WriteLine("Usage: <Language Choice> <Source Code Filename>");
-            Console.WriteLine("Python: /p");
             Console.WriteLine("Lua: /l");
+            Console.WriteLine("Python: /p");
             Environment.Exit(0);
         }
 
