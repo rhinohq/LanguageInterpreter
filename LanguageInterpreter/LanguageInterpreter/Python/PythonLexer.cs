@@ -1,4 +1,6 @@
-﻿namespace LanguageInterpreter.Python
+﻿// Deprecated class. This is the Lexer for Python, the language this interpreter was originally for.
+
+namespace LanguageInterpreter.Python
 {
     internal class PythonLexer
     {
@@ -54,7 +56,7 @@
             { @"[A-Za-z][A-Za-z0-9_]*", ID }
         };
 
-        public string[,] PythonLex(string[] Characters)
+        public string[,] PythonLex(string Characters)
         {
             Lexer Lexer = new Lexer();
 

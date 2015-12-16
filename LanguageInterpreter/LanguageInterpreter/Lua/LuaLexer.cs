@@ -4,7 +4,7 @@ namespace LanguageInterpreter.Lua
 {
     internal class LuaLexer
     {
-        // Constant variables for storing the tag types in an easily accessable and readable way.
+        // Constant variables for storing the tag types in an easily accessible and readable way.
         public const string RESERVED = "RESERVED";
         public const string INT = "INT";
         public const string ID = "ID";
@@ -65,7 +65,7 @@ namespace LanguageInterpreter.Lua
         };
 
         // Function for returning the tokens from the source code.
-        public string[,] LuaLex(string[] Characters)
+        public string[,] LuaLex(string Characters)
         {
             Lexer Lexer = new Lexer();
 
