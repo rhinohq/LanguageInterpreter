@@ -6,7 +6,6 @@ namespace LanguageInterpreter.Lua
     {
         // Constant variables for storing the tag types in an easily accessible and readable way.
         public const string RESERVED = "RESERVED";
-
         public const string INT = "INT";
         public const string ID = "ID";
 

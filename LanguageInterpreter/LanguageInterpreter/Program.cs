@@ -30,6 +30,7 @@ namespace LanguageInterpreter
             Environment.Exit(0);
         }
 
+        // Lua Interpreter
         public static void InterpretLua(string Code)
         {
             Lua.LuaLexer Lexer = new Lua.LuaLexer();
