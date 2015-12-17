@@ -8,6 +8,7 @@ namespace LanguageInterpreter.Python
         public const string INT = "INT";
         public const string ID = "ID";
 
+        // 2D Array storing the keywords, operators and syntax of Python for the Lexer.
         private string[,] TokenExpressions = new string[,] {
             { @"[ \n\t]+", null },
             { @"#[^\n]*", null },

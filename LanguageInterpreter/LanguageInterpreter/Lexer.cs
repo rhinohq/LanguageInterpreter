@@ -10,7 +10,6 @@ namespace LanguageInterpreter
         // Function that converts the source code in to tokens.
         public string[,] Lex(string Characters, string[,] TokenExpressions)
         {
-            // Variable Declaration
             int Pos = 0;
             int Count = 0;
             int TokenIndex = 0;
@@ -49,10 +48,8 @@ namespace LanguageInterpreter
                     Environment.Exit(0);
                 }
                 else
-                {
                     // Make the Pos pointer to be after the recently matched keyword.
-                    Pos = Characters.IndexOf(Text, Pos);
-                }
+                    Pos = Characters.IndexOf(Text, Pos) + Text.Length;
             }
 
             return Tokens;
