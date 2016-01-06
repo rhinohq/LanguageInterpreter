@@ -23,12 +23,28 @@ namespace LanguageInterpreter
         
         public bool MarkVars()
         {
+            foreach (Variable Var in Code.AssignedVariables)
+            {
+                if (MarkScheme.Contains(Var))
+                {
+                    return true;
+                }
+            }
             
+            return false;
         }
         
         public bool MarkExprs()
         {
+            foreach (Expression Expr in Code.Expressions)
+            {
+                if (MarkScheme.Contains(Expr))
+                {
+                    return true;
+                }
+            }
             
+            return false;
         }
         
         public bool MarkControlStructs()
@@ -39,11 +55,9 @@ namespace LanguageInterpreter
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
             }
+            
+            return false;
         }
     }
 }
