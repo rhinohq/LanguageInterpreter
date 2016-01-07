@@ -6,8 +6,8 @@ namespace LanguageInterpreter
 {
     public class Marker
     {
-        public MarkerLists.ExMarkScheme MarkScheme { get; set; }
-        public MarkerLists.UserCode Code { get; set; }
+        public ExMarkScheme MarkScheme { get; set; }
+        public UserCode Code { get; set; }
         
         public bool MarkOutput()
         {
@@ -23,7 +23,7 @@ namespace LanguageInterpreter
         
         public bool MarkVars()
         {
-            foreach (Variable Var in Code.AssignedVariables)
+            foreach (UserCode.Variable Var in Code.AssignedVariables)
             {
                 if (MarkScheme.Contains(Var))
                 {
@@ -36,7 +36,7 @@ namespace LanguageInterpreter
         
         public bool MarkExprs()
         {
-            foreach (Expression Expr in Code.Expressions)
+            foreach (UserCode.Expression Expr in Code.Expressions)
             {
                 if (MarkScheme.Contains(Expr))
                 {
@@ -49,7 +49,7 @@ namespace LanguageInterpreter
         
         public bool MarkControlStructs()
         {
-            foreach (ControlStructure ConStruct in Code.ControlStructures)
+            foreach (UserCode.ControlStructure ConStruct in Code.ControlStructures)
             {
                 if (MarkScheme.Contains(ConStruct))
                 {

@@ -50,6 +50,8 @@
     <Compile Include="Lua\LuaAST.cs" />
     <Compile Include="Lua\LuaLexer.cs" />
     <Compile Include="Lua\LuaParser.cs" />
+    <Compile Include="Marker.cs" />
+    <Compile Include="MarkerLists.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Python\PythonLexer.cs" />

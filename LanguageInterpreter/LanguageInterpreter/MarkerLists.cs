@@ -10,18 +10,33 @@ namespace LanguageInterpreter
             public string VarName { get; set; }
             public string VarType { get; set; }
             public string VarValue { get; set; }
+
+            public bool Equals(Variable other)
+            {
+                throw new NotImplementedException();
+            }
         }
         
         public class Expression : IEquatable<Expression>
         {
             public string ExpressionType { get; set; }
-            public string Expression { get; set; }
+            public string ExpressionStr { get; set; }
+
+            public bool Equals(Expression other)
+            {
+                throw new NotImplementedException();
+            }
         }
         
         public class ControlStructure : IEquatable<ControlStructure>
         {
             public string StructureType { get; set; }
             public string StrutureCondition {get; set; }
+
+            public bool Equals(ControlStructure other)
+            {
+                throw new NotImplementedException();
+            }
         }
         
         public string Output { get; set; }
@@ -43,18 +58,33 @@ namespace LanguageInterpreter
             public string VarName { get; set; }
             public string VarType { get; set; }
             public string VarValue { get; set; }
+
+            public bool Equals(Variable other)
+            {
+                throw new NotImplementedException();
+            }
         }
         
         public class Expression : IEquatable<Expression>
         {
             public string ExpressionType { get; set; }
-            public string Expression { get; set; }
+            public string ExpressionStr { get; set; }
+
+            public bool Equals(Expression other)
+            {
+                throw new NotImplementedException();
+            }
         }
         
         public class ControlStructure : IEquatable<ControlStructure>
         {
             public string StructureType { get; set; }
             public string StrutureCondition {get; set; }
+
+            public bool Equals(ControlStructure other)
+            {
+                throw new NotImplementedException();
+            }
         }
         
         public string Output { get; set; }
