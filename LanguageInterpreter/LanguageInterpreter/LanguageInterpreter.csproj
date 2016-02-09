@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chunk\Chunk.cs" />
+    <Compile Include="Expr\Expr.cs" />
     <Compile Include="LuaInterpreter.cs" />
     <Compile Include="LuaLibs\BaseLib.cs" />
     <Compile Include="Parser\ParserInput.cs" />
