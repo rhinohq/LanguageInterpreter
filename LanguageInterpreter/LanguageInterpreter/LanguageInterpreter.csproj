@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chunk\Chunk.cs" />
     <Compile Include="LuaInterpreter.cs" />
     <Compile Include="LuaLibs\BaseLib.cs" />
     <Compile Include="Parser\ParserInput.cs" />
