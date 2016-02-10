@@ -51,9 +51,7 @@ namespace LanguageInterpreter
             StringLib.RegisterModule(global);
             TableLib.RegisterModule(global);
             IOLib.RegisterModule(global);
-            FileLib.RegisterModule(global);
             MathLib.RegisterModule(global);
-            OSLib.RegisterModule(global);
 
             global.SetNameValue("_G", global);
 
