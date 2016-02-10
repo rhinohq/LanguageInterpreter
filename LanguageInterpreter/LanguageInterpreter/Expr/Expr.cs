@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
-namespace LanguageInterpreter.Expr
+namespace Language.Lua
 {
     public abstract partial class Access
     {

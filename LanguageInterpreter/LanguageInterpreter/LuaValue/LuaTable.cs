@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LanguageInterpreter.LuaValue
+namespace Language.Lua
 {
     public class LuaTable : LuaValue
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace LanguageInterpreter.Chunk
+namespace Language.Lua
 {
     public partial class Assignment : Statement
     {
@@ -235,35 +235,38 @@ namespace LanguageInterpreter.Chunk
         }
     }
 
-    public override LuaValue Execute(LuaTable enviroment, out bool isBreak)
+    public partial class ForStmt : Statement
     {
-        LuaNumber start = Start.Evaluate(enviroment) as LuaNumber;
-        LuaNumber end = End.Evaluate(enviroment) as LuaNumber;
-
-        double step = 1;
-        if (Step != null)
+        public override LuaValue Execute(LuaTable enviroment, out bool isBreak)
         {
-            step = (Step.Evaluate(enviroment) as LuaNumber).Number;
-        }
+            LuaNumber start = Start.Evaluate(enviroment) as LuaNumber;
+            LuaNumber end = End.Evaluate(enviroment) as LuaNumber;
 
-        var table = new LuaTable(enviroment);
-        table.SetNameValue(VarName, start);
-        Body.Enviroment = table;
-
-        while (step > 0 && start.Number <= end.Number ||
-               step <= 0 && start.Number >= end.Number)
-        {
-            var returnValue = Body.Execute(out isBreak);
-            if (returnValue != null || isBreak == true)
+            double step = 1;
+            if (Step != null)
             {
-                isBreak = false;
-                return returnValue;
+                step = (Step.Evaluate(enviroment) as LuaNumber).Number;
             }
-            start.Number += step;
-        }
 
-        isBreak = false;
-        return null;
+            var table = new LuaTable(enviroment);
+            table.SetNameValue(VarName, start);
+            Body.Enviroment = table;
+
+            while (step > 0 && start.Number <= end.Number ||
+                   step <= 0 && start.Number >= end.Number)
+            {
+                var returnValue = Body.Execute(out isBreak);
+                if (returnValue != null || isBreak == true)
+                {
+                    isBreak = false;
+                    return returnValue;
+                }
+                start.Number += step;
+            }
+
+            isBreak = false;
+            return null;
+        }
     }
 
     public partial class Function : Statement
@@ -314,34 +317,37 @@ namespace LanguageInterpreter.Chunk
         }
     }
 
-    public override LuaValue Execute(LuaTable enviroment, out bool isBreak)
+    public partial class IfStmt : Statement
     {
-        LuaValue condition = Condition.Evaluate(enviroment);
+        public override LuaValue Execute(LuaTable enviroment, out bool isBreak)
+        {
+            LuaValue condition = Condition.Evaluate(enviroment);
 
-        if (condition.GetBooleanValue() == true)
-        {
-            return ThenBlock.Execute(enviroment, out isBreak);
-        }
-        else
-        {
-            foreach (ElseifBlock elseifBlock in ElseifBlocks)
+            if (condition.GetBooleanValue() == true)
             {
-                condition = elseifBlock.Condition.Evaluate(enviroment);
-
-                if (condition.GetBooleanValue() == true)
+                return ThenBlock.Execute(enviroment, out isBreak);
+            }
+            else
+            {
+                foreach (ElseifBlock elseifBlock in ElseifBlocks)
                 {
-                    return elseifBlock.ThenBlock.Execute(enviroment, out isBreak);
+                    condition = elseifBlock.Condition.Evaluate(enviroment);
+
+                    if (condition.GetBooleanValue() == true)
+                    {
+                        return elseifBlock.ThenBlock.Execute(enviroment, out isBreak);
+                    }
+                }
+
+                if (ElseBlock != null)
+                {
+                    return ElseBlock.Execute(enviroment, out isBreak);
                 }
             }
 
-            if (ElseBlock != null)
-            {
-                return ElseBlock.Execute(enviroment, out isBreak);
-            }
+            isBreak = false;
+            return null;
         }
-
-        isBreak = false;
-        return null;
     }
 
     public partial class LocalFunc : Statement

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace LanguageInterpreter
+using Language.Lua.Library;
+
+namespace Language.Lua
 {
     internal class LuaInterpreter
     {

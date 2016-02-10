@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LanguageInterpreter.LuaLibs
+namespace Language.Lua.Library
 {
     internal class BaseLib
     {

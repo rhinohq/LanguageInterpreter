@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LanguageInterpreter.LuaValue
+namespace Language.Lua
 {
     public abstract class LuaValue : IEquatable<LuaValue>
     {

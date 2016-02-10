@@ -1,4 +1,4 @@
-﻿namespace LanguageInterpreter.Parser
+namespace Language.Lua
 {
     public interface ParserInput<T>
     {

@@ -1,6 +1,6 @@
-﻿namespace LanguageInterpreter.LuaValue
+﻿namespace Language.Lua
 {
-    internal class LuaBoolean : LuaValue
+    public class LuaBoolean : LuaValue
     {
         public static readonly LuaBoolean False = new LuaBoolean { BoolValue = false };
 

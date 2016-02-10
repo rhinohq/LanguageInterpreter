@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace LanguageInterpreter.LuaLibs
+namespace Language.Lua.Library
 {
     public static class MathLib
     {

@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LanguageInterpreter.LuaLibs
+namespace Language.Lua.Library
 {
     public static class TableLib
     {
