@@ -62,8 +62,11 @@
     <Compile Include="LuaValue\LuaTable.cs" />
     <Compile Include="LuaValue\LuaUserdata.cs" />
     <Compile Include="LuaValue\LuaValue.cs" />
+    <Compile Include="Parser\Parser.cs" />
     <Compile Include="Parser\ParserInput.cs" />
     <Compile Include="Parser\Syntax\Syntax.cs" />
+    <Compile Include="Parser\TextInput.cs" />
+    <Compile Include="Parser\TextParserCommon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,7 +74,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lua.Grammar.txt" />
+    <EmbeddedResource Include="Lua.Grammar.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
