@@ -2,7 +2,7 @@
 
 namespace LanguageInterpreter.LuaLibs
 {
-    class BaseLib
+    internal class BaseLib
     {
         public static void RegisterFunctions(LuaTable module)
         {

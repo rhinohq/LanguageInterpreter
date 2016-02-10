@@ -1,12 +1,9 @@
-﻿using System;
-
-namespace LanguageInterpreter
+﻿namespace LanguageInterpreter
 {
-    class Program
+    internal class Program
     {
         private static void Main(string[] args)
         {
-            
         }
     }
 }

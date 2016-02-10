@@ -3,7 +3,7 @@ using System.IO;
 
 namespace LanguageInterpreter
 {
-    class LuaInterpreter
+    internal class LuaInterpreter
     {
         public static LuaValue RunFile(string luaFile)
         {

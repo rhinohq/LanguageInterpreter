@@ -48,6 +48,16 @@
     <Compile Include="Expr\Expr.cs" />
     <Compile Include="LuaInterpreter.cs" />
     <Compile Include="LuaLibs\BaseLib.cs" />
+    <Compile Include="LuaValue\LuaBoolean.cs" />
+    <Compile Include="LuaValue\LuaError.cs" />
+    <Compile Include="LuaValue\LuaFunction.cs" />
+    <Compile Include="LuaValue\LuaMultiValue.cs" />
+    <Compile Include="LuaValue\LuaNil.cs" />
+    <Compile Include="LuaValue\LuaNumber.cs" />
+    <Compile Include="LuaValue\LuaString.cs" />
+    <Compile Include="LuaValue\LuaTable.cs" />
+    <Compile Include="LuaValue\LuaUserdata.cs" />
+    <Compile Include="LuaValue\LuaValue.cs" />
     <Compile Include="Parser\ParserInput.cs" />
     <Compile Include="Parser\Syntax\Syntax.cs" />
     <Compile Include="Program.cs" />

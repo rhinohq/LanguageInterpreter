@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace LanguageInterpreter.Parser.Syntax
 {
-    class Syntax
+    internal class Syntax
     {
         public partial class Access
         {
