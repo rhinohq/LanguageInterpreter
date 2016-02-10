@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Language.Lua.Library;
+using System;
 using System.IO;
-
-using Language.Lua.Library;
 
 namespace Language.Lua
 {
